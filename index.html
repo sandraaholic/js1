@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico">
 
-    <title>Checkout example for Bootstrap</title>
+    <title>Layanan Pengaduan Masyarakat - UIN Bukittinggi</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -39,161 +39,137 @@
           </ul>
         </div>
         <div class="col-md-8 order-md-1">
-          <h4 class="mb-3">Billing address</h4>
+          <h4 class="mb-3">Data Aduan</h4>
           <form class="needs-validation" novalidate>
             <div class="row">
               <div class="col-md-6 mb-3">
-                <label for="firstName">First name</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                <label for="nama">Nama</label>
+                <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama">
                 <div class="invalid-feedback">
                   Valid first name is required.
                 </div>
               </div>
               <div class="col-md-6 mb-3">
-                <label for="lastName">Last name</label>
-                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                <label for="lastName">NIK/NIP/NIM</label>
+                <input type="number" class="form-control" id="nik" name="nik" placeholder="NIP/NIM/NIK">
                 <div class="invalid-feedback">
                   Valid last name is required.
                 </div>
               </div>
             </div>
-
-            <div class="mb-3">
-              <label for="username">Username</label>
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">@</span>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="username">Email</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">@</span>
+                    </div>
+                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                    <div class="invalid-feedback" style="width: 100%;">
+                      Your username is required.
+                    </div>
+                  </div>
                 </div>
-                <input type="text" class="form-control" id="username" placeholder="Username" required>
-                <div class="invalid-feedback" style="width: 100%;">
-                  Your username is required.
+                <div class="col-md-6 mb-3">
+                  <label for="nowa">Nomor WA</label>
+                  <input type="number" class="form-control mb-3" id="nowa" name="nowa" placeholder="Nomor Whatsapp">
+                  <div class="invalid-feedback">
+                    Please enter a valid email address for shipping updates.
+                  </div>
                 </div>
-              </div>
             </div>
-
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="tgllahir">Tanggal Lahir</label>
+                    <input type="date" class="form-control mb-3" id="tgllahir" name="tgllahir" placeholder="Tanggal Lahir">
+                    <div class="invalid-feedback">
+                        Please enter a valid email address for shipping updates.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label>Status Pelapor</label>
+                    <select class="custom-select d-block w-100" id="pelapor"  name="pelapor" required="">
+                        <option>--pilih--</option>
+                        <option value="Dosen">Dosen</option>
+                        <option value="Tenaga Kependidikan">Tenaga Kependidikan</option>
+                        <option value="Mahasiswa">Mahasiswa</option>
+                        <option value="Mitra Kerjasama">Mitra Kerjasama</option>
+                    </select>
+                </div>
+            </div>
+            <hr>
             <div class="mb-3">
-              <label for="email">Email <span class="text-muted">(Optional)</span></label>
-              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                <label for="tglkejadian">Tanggal Kejadian</label>
+                <input type="date" class="form-control mb-3" id="tglkejadian" name="tglkejadian" placeholder="Tanggal Kejadian">
+                <div class="invalid-feedback">
+                    Please enter a valid email address for shipping updates.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="tptkejadian">Tempat Kejadian</label>
+                <input type="text" class="form-control mb-3" id="tptkejadian" name="tptkejadian" placeholder="Tempat Kejadian">
+                <div class="invalid-feedback">
+                    Please enter a valid email address for shipping updates.
+                </div>
+            </div>
+            
+            <div class="row">
+               
+                <div class="col-md-6 mb-3">
+                    <label>Jenis Keluhan</label>
+                    <select name="jnsaduan" id="jnsaduan" class="custom-select d-block w-100">
+                        <option>--Pilih--</option>
+                        <option name="Penelitian">Penelitian</option>
+                        <option name="Pengabdian">Pengabdian</option>
+                        <option name="Layanan Managemen">Layanan Managemen</option>
+                        <option name="Bimbingan Karir">Bimbingan Karir</option>
+                        <option name="Sarana">Sarana</option>
+                        <option name="IT Wifi Kampus">IT Wifi Kampus</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label>Persentase keluhan</label>
+                    <select name="persen" id="persen" class="form-control">
+                        <option>--pilih--</option>
+                        <option name="10%">10 %</option>
+                        <option name="20%">20 %</option>
+                        <option name="30%">30 %</option>
+                        <option name="40%">40 %</option>
+                        <option name="50%">50 %</option>
+                        <option name="60%">60 %</option>
+                        <option name="70%">70 %</option>
+                        <option name="80%">80 %</option>
+                        <option name="90%">90 %</option>
+                        <option name="100%">100 %</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <label for="cc-name">Deskripsi Keluhan</label>
+                    <textarea name="keluhan" id="keluhan" class="form-control" placeholder="Deskripsi Keluhan"></textarea>  
+                    <small class="text-muted">Silahkan sampaikan keluhan anda</small>
+                    <div class="invalid-feedback">
+                        Deskripsi keluhan required
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label>Link file data pendukung (jika ada)</label>
+                <input type="text" class="form-control mb-3" id="linkfile" name="linkfile" placeholder="link file">
               <div class="invalid-feedback">
                 Please enter a valid email address for shipping updates.
               </div>
             </div>
-
-            <div class="mb-3">
-              <label for="address">Address</label>
-              <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
-              <div class="invalid-feedback">
-                Please enter your shipping address.
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
-              <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
-            </div>
-
-            <div class="row">
-              <div class="col-md-5 mb-3">
-                <label for="country">Country</label>
-                <select class="custom-select d-block w-100" id="country" required>
-                  <option value="">Choose...</option>
-                  <option>United States</option>
-                </select>
-                <div class="invalid-feedback">
-                  Please select a valid country.
-                </div>
-              </div>
-              <div class="col-md-4 mb-3">
-                <label for="state">State</label>
-                <select class="custom-select d-block w-100" id="state" required>
-                  <option value="">Choose...</option>
-                  <option>California</option>
-                </select>
-                <div class="invalid-feedback">
-                  Please provide a valid state.
-                </div>
-              </div>
-              <div class="col-md-3 mb-3">
-                <label for="zip">Zip</label>
-                <input type="text" class="form-control" id="zip" placeholder="" required>
-                <div class="invalid-feedback">
-                  Zip code required.
-                </div>
-              </div>
-            </div>
             <hr class="mb-4">
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="same-address">
-              <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
-            </div>
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="save-info">
-              <label class="custom-control-label" for="save-info">Save this information for next time</label>
-            </div>
-            <hr class="mb-4">
-
-            <h4 class="mb-3">Payment</h4>
-
-            <div class="d-block my-3">
-              <div class="custom-control custom-radio">
-                <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-                <label class="custom-control-label" for="credit">Credit card</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-                <label class="custom-control-label" for="debit">Debit card</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-                <label class="custom-control-label" for="paypal">Paypal</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <label for="cc-name">Name on card</label>
-                <input type="text" class="form-control" id="cc-name" placeholder="" required>
-                <small class="text-muted">Full name as displayed on card</small>
-                <div class="invalid-feedback">
-                  Name on card is required
-                </div>
-              </div>
-              <div class="col-md-6 mb-3">
-                <label for="cc-number">Credit card number</label>
-                <input type="text" class="form-control" id="cc-number" placeholder="" required>
-                <div class="invalid-feedback">
-                  Credit card number is required
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-3 mb-3">
-                <label for="cc-expiration">Expiration</label>
-                <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-                <div class="invalid-feedback">
-                  Expiration date required
-                </div>
-              </div>
-              <div class="col-md-3 mb-3">
-                <label for="cc-expiration">CVV</label>
-                <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-                <div class="invalid-feedback">
-                  Security code required
-                </div>
-              </div>
-            </div>
-            <hr class="mb-4">
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+            <button type="button" id="submit" class="btn btn-primary btn-lg btn-block">Kirim</button>
           </form>
         </div>
       </div>
 
       <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">&copy; 2017-2018 Company Name</p>
-        <ul class="list-inline">
-          <li class="list-inline-item"><a href="#">Privacy</a></li>
-          <li class="list-inline-item"><a href="#">Terms</a></li>
-          <li class="list-inline-item"><a href="#">Support</a></li>
-        </ul>
+        <hr class="">
+        <p class="mb-1">&copy; 2024 - UIN Sjech M. Djamil Djambek Bukittinggi</p>
       </footer>
     </div>
 
@@ -226,6 +202,78 @@
           });
         }, false);
       })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(function() {
+        $('#submit').on('click', function() {
+          
+          // name
+          var name = $('#demo_name').val() || 'no set';
+  
+          // gender
+          var gender = function() {
+            var v;
+            $('[name="demo_radio"]').each(function() {
+              if($(this).prop('checked') === true) v = $(this).val();
+            });
+            return v;
+          };
+  
+          // category
+          var cat = $('#demo_select').val() || 'no set';
+  
+          // question
+          var question = $('#demo_textarea').val() || 'no set';
+          
+          var nama = $('#nama').val() || 'not set';
+          var email = $('#email').val() || 'not set';
+          var nik = $('#nik').val() || 'not set';
+          var tgllahir = $('#tgllahir').val() || 'not set';
+          var nowa = $('#nowa').val() || 'not set';
+          var tglkejadian = $('#tglkejadian').val() || 'not set';
+          var tptkejadian = $('#tptkejadian').val() || 'not set';
+          var keluhan = $('#keluhan').val() || 'not set';
+          var linkfile = $('#linkfile').val() || 'not set';
+          var pelapor = $('#pelapor').val() || 'not set';
+          var jnsaduan = $('#jnsaduan').val() || 'not set';
+          var persen = $('#persen').val() || 'not set';
+  
+          // post
+          var data = {
+            'entry.2065974955': name,
+            'entry.1310259066': gender(),
+            'entry.896842914': cat,
+            'entry.1857722787': question,
+            
+            'entry.2049534147': nama,
+            'entry.759827394': email,
+            'entry.980737058': nik,
+            'entry.419804677': tgllahir,
+            'entry.1574133225': nowa,
+            'entry.1391617394': pelapor,
+            'entry.182396685': tglkejadian,
+            'entry.2040651157': tptkejadian,
+            'entry.1587234247': jnsaduan,
+            'entry.460058573': keluhan,
+            'entry.1484627336': persen,
+            'entry.1637567284': linkfile
+          };
+          $.ajax({
+            type: 'POST',
+            url: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSfuZRHmGwkdXUgkYIhPWyxI0FBBn2fHQDlbkefSaAC68aIDUA/formResponse',
+            data: data,
+            contentType: 'application/json',
+            dataType: 'jsonp',
+            complete: function() {
+              alert('Data keluhan anda telah dikirim');
+              let host = location.host; 
+              location.href = host;
+            }
+          });
+          
+        });
+      });
     </script>
   </body>
 </html>
